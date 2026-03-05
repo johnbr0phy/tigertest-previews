@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard V1 — Journey Strip</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: '#f97316',
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-white min-h-screen font-sans">
+
+<!-- Nav -->
+<nav class="bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2">
+    <span class="text-2xl">🐯</span>
+    <span class="font-bold text-gray-900">TigerTest</span>
+  </div>
+  <span class="text-sm text-gray-500">California</span>
+</nav>
+
+<div class="max-w-2xl mx-auto px-4 py-6">
+
+  <!-- JOURNEY STRIP — the core of V1 -->
+  <div class="mb-8">
+    <div class="flex items-center gap-0 rounded-2xl overflow-hidden border border-gray-200 shadow-sm">
+      <!-- Step 1: Train — DONE -->
+      <div class="flex-1 bg-green-50 border-r border-gray-200 p-4 text-center">
+        <div class="w-7 h-7 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold mx-auto mb-1">✓</div>
+        <p class="text-xs font-semibold text-green-700">Train</p>
+        <p class="text-xs text-green-500 mt-0.5">3/4 done</p>
+      </div>
+      <!-- Step 2: Test — CURRENT -->
+      <div class="flex-1 bg-orange-500 p-4 text-center relative">
+        <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 bg-white text-orange-500 text-xs font-bold px-2 py-0.5 rounded-full border border-orange-300 whitespace-nowrap">YOU ARE HERE</div>
+        <div class="w-7 h-7 rounded-full bg-white text-orange-500 text-xs flex items-center justify-center font-bold mx-auto mb-1 mt-1">2</div>
+        <p class="text-xs font-semibold text-white">Take a Test</p>
+        <p class="text-xs text-orange-100 mt-0.5">Not started</p>
+      </div>
+      <!-- Step 3: Pass — LOCKED -->
+      <div class="flex-1 bg-gray-50 border-l border-gray-200 p-4 text-center">
+        <div class="w-7 h-7 rounded-full bg-gray-200 text-gray-400 text-xs flex items-center justify-center font-bold mx-auto mb-1">3</div>
+        <p class="text-xs font-semibold text-gray-400">Pass</p>
+        <p class="text-xs text-gray-300 mt-0.5">DMV ready</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIMARY CTA — big, unmissable -->
+  <a href="#" class="block mb-8">
+    <div class="bg-orange-500 hover:bg-orange-600 transition-colors rounded-2xl p-6 text-white shadow-lg">
+      <p class="text-xs font-semibold uppercase tracking-widest text-orange-100 mb-1">Your next step</p>
+      <p class="text-2xl font-bold mb-1">Take Practice Test 1 →</p>
+      <p class="text-sm text-orange-100">50 questions · ~15 mins · same format as the real DMV test</p>
+    </div>
+  </a>
+
+  <!-- Training (secondary, collapsed) -->
+  <div class="mb-6">
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-base font-bold text-gray-700">Training</h2>
+      <span class="text-xs text-green-600 font-semibold bg-green-50 px-2 py-1 rounded-full">3 of 4 complete</span>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <!-- Set 1 done -->
+      <div class="rounded-xl border border-green-200 bg-green-50 p-3 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white text-sm flex items-center justify-center font-bold">✓</div>
+        <div>
+          <p class="text-xs font-semibold text-gray-700">Set 1: Road Rules</p>
+          <p class="text-xs text-green-600">50/50</p>
+        </div>
+      </div>
+      <!-- Set 2 done -->
+      <div class="rounded-xl border border-green-200 bg-green-50 p-3 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white text-sm flex items-center justify-center font-bold">✓</div>
+        <div>
+          <p class="text-xs font-semibold text-gray-700">Set 2: Signs</p>
+          <p class="text-xs text-green-600">50/50</p>
+        </div>
+      </div>
+      <!-- Set 3 done -->
+      <div class="rounded-xl border border-green-200 bg-green-50 p-3 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-green-500 text-white text-sm flex items-center justify-center font-bold">✓</div>
+        <div>
+          <p class="text-xs font-semibold text-gray-700">Set 3: Situations</p>
+          <p class="text-xs text-green-600">50/50</p>
+        </div>
+      </div>
+      <!-- Set 4 premium -->
+      <div class="rounded-xl border border-gray-200 bg-gray-50 p-3 flex items-center gap-3 opacity-60">
+        <div class="w-8 h-8 rounded-full bg-gray-200 text-gray-400 text-sm flex items-center justify-center">🔒</div>
+        <div>
+          <p class="text-xs font-semibold text-gray-500">Set 4: Advanced</p>
+          <p class="text-xs text-gray-400">Premium</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Practice Tests (secondary) -->
+  <div>
+    <h2 class="text-base font-bold text-gray-700 mb-3">Practice Tests</h2>
+    <div class="grid grid-cols-2 gap-2">
+      <!-- Test 1 — ready, pulsing -->
+      <div class="rounded-xl border-2 border-orange-400 bg-orange-50 p-4 cursor-pointer hover:shadow-md transition-shadow animate-pulse">
+        <p class="text-xs font-semibold text-orange-600 mb-1">TEST 1</p>
+        <p class="text-sm font-bold text-gray-900">Ready to go →</p>
+        <p class="text-xs text-gray-500 mt-1">Not started</p>
+      </div>
+      <!-- Test 2 -->
+      <div class="rounded-xl border border-gray-200 bg-white p-4 opacity-50">
+        <p class="text-xs font-semibold text-gray-400 mb-1">TEST 2</p>
+        <p class="text-sm font-bold text-gray-400">Complete Test 1 first</p>
+      </div>
+      <!-- Test 3 -->
+      <div class="rounded-xl border border-gray-200 bg-white p-4 opacity-50">
+        <p class="text-xs font-semibold text-gray-400 mb-1">TEST 3</p>
+        <p class="text-sm font-bold text-gray-400">Complete Test 2 first</p>
+      </div>
+      <!-- Test 4 premium -->
+      <div class="rounded-xl border border-gray-200 bg-gray-50 p-4 opacity-50">
+        <p class="text-xs font-semibold text-gray-400 mb-1">TEST 4</p>
+        <p class="text-sm font-bold text-gray-400">🔒 Premium</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="text-center py-6">
+  <p class="text-xs text-gray-400 font-mono">V1 — Journey Strip · State: trained 3/4, no tests taken</p>
+</div>
+
+</body>
+</html>
