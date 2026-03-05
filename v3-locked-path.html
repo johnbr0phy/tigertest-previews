@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard V3 — Locked Path</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white min-h-screen font-sans">
+
+<!-- Nav -->
+<nav class="bg-white border-b border-gray-100 px-4 py-3 flex items-center justify-between">
+  <div class="flex items-center gap-2">
+    <span class="text-2xl">🐯</span>
+    <span class="font-bold text-gray-900">TigerTest</span>
+  </div>
+  <span class="text-sm text-gray-500">California</span>
+</nav>
+
+<div class="max-w-2xl mx-auto px-4 py-6">
+
+  <!-- Stats header -->
+  <div class="flex items-center justify-between mb-6">
+    <div>
+      <h1 class="text-xl font-black text-gray-900">Your DMV Prep</h1>
+      <p class="text-sm text-gray-400">California · 3 training sets done</p>
+    </div>
+    <div class="text-right">
+      <p class="text-2xl font-black text-orange-500">62%</p>
+      <p class="text-xs text-gray-400">pass chance</p>
+    </div>
+  </div>
+
+  <!-- SECTION HEADER: Step 1 -->
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-6 h-6 rounded-full bg-green-500 text-white text-xs flex items-center justify-center font-bold">✓</div>
+    <h2 class="font-bold text-gray-700 text-sm uppercase tracking-wide">Step 1 — Train</h2>
+    <div class="flex-1 h-px bg-green-200"></div>
+    <span class="text-xs text-green-600 font-semibold">3/4 done</span>
+  </div>
+
+  <div class="grid grid-cols-2 gap-2 mb-6">
+    <div class="rounded-xl border border-green-200 bg-green-50 p-3 flex items-center gap-2">
+      <span class="text-green-500 text-base">✓</span>
+      <div>
+        <p class="text-xs font-semibold text-gray-700">Set 1: Road Rules</p>
+        <p class="text-xs text-green-500">Complete</p>
+      </div>
+    </div>
+    <div class="rounded-xl border border-green-200 bg-green-50 p-3 flex items-center gap-2">
+      <span class="text-green-500 text-base">✓</span>
+      <div>
+        <p class="text-xs font-semibold text-gray-700">Set 2: Signs</p>
+        <p class="text-xs text-green-500">Complete</p>
+      </div>
+    </div>
+    <div class="rounded-xl border border-green-200 bg-green-50 p-3 flex items-center gap-2">
+      <span class="text-green-500 text-base">✓</span>
+      <div>
+        <p class="text-xs font-semibold text-gray-700">Set 3: Situations</p>
+        <p class="text-xs text-green-500">Complete</p>
+      </div>
+    </div>
+    <div class="rounded-xl border border-gray-200 bg-gray-50 p-3 flex items-center gap-2 opacity-50">
+      <span class="text-gray-300 text-base">🔒</span>
+      <div>
+        <p class="text-xs font-semibold text-gray-400">Set 4: Advanced</p>
+        <p class="text-xs text-gray-300">Premium</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONNECTOR — visual arrow down to step 2 -->
+  <div class="flex flex-col items-center my-2 mb-4">
+    <div class="w-px h-4 bg-orange-300"></div>
+    <div class="w-4 h-4 text-orange-400 flex items-center justify-center">▼</div>
+  </div>
+
+  <!-- SECTION HEADER: Step 2 — ACTIVE -->
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs flex items-center justify-center font-bold animate-pulse">2</div>
+    <h2 class="font-bold text-orange-600 text-sm uppercase tracking-wide">Step 2 — Test Yourself</h2>
+    <div class="flex-1 h-px bg-orange-200"></div>
+    <span class="text-xs text-orange-500 font-semibold">← Start here</span>
+  </div>
+
+  <div class="grid grid-cols-2 gap-2 mb-6">
+    <!-- Test 1 — UNLOCKED, prominent -->
+    <a href="#" class="col-span-2 rounded-2xl border-2 border-orange-400 bg-gradient-to-r from-orange-50 to-amber-50 p-5 flex items-center gap-4 cursor-pointer hover:shadow-md transition-shadow">
+      <div class="w-12 h-12 rounded-full bg-orange-500 text-white text-lg flex items-center justify-center font-black flex-shrink-0">1</div>
+      <div class="flex-1">
+        <p class="font-black text-gray-900 text-base">Practice Test 1</p>
+        <p class="text-xs text-gray-500 mt-0.5">50 questions · same format as the DMV exam</p>
+      </div>
+      <div class="bg-orange-500 text-white text-sm font-bold px-4 py-2 rounded-xl flex-shrink-0">
+        Start →
+      </div>
+    </a>
+
+    <!-- Test 2 — locked until Test 1 done -->
+    <div class="rounded-xl border border-gray-200 bg-white p-4 relative overflow-hidden">
+      <div class="absolute inset-0 bg-white/80 flex items-center justify-center">
+        <p class="text-xs text-gray-400 font-semibold text-center">Pass Test 1<br/>to unlock</p>
+      </div>
+      <p class="text-xs text-gray-300 font-semibold">TEST 2</p>
+      <p class="text-sm text-gray-200 font-bold mt-1">Practice Test 2</p>
+    </div>
+
+    <!-- Test 3 — locked -->
+    <div class="rounded-xl border border-gray-200 bg-white p-4 relative overflow-hidden">
+      <div class="absolute inset-0 bg-white/80 flex items-center justify-center">
+        <p class="text-xs text-gray-400 font-semibold text-center">Pass Test 2<br/>to unlock</p>
+      </div>
+      <p class="text-xs text-gray-300 font-semibold">TEST 3</p>
+      <p class="text-sm text-gray-200 font-bold mt-1">Practice Test 3</p>
+    </div>
+  </div>
+
+  <!-- CONNECTOR -->
+  <div class="flex flex-col items-center my-2 mb-4">
+    <div class="w-px h-4 bg-gray-200"></div>
+    <div class="w-4 h-4 text-gray-300 flex items-center justify-center">▼</div>
+  </div>
+
+  <!-- SECTION HEADER: Step 3 — LOCKED -->
+  <div class="flex items-center gap-3 mb-3 opacity-40">
+    <div class="w-6 h-6 rounded-full bg-gray-200 text-gray-400 text-xs flex items-center justify-center font-bold">3</div>
+    <h2 class="font-bold text-gray-400 text-sm uppercase tracking-wide">Step 3 — You're DMV Ready</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+  </div>
+
+  <div class="rounded-2xl border border-gray-200 bg-gray-50 p-5 flex items-center gap-4 opacity-40 mb-6">
+    <div class="w-12 h-12 rounded-full bg-gray-200 text-gray-300 text-lg flex items-center justify-center">🏁</div>
+    <div>
+      <p class="font-bold text-gray-400">Pass 3 tests, get your pass card</p>
+      <p class="text-xs text-gray-300 mt-0.5">Shareable proof you're ready for the real thing</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="text-center py-6">
+  <p class="text-xs text-gray-400 font-mono">V3 — Locked Path · State: trained 3/4, no tests taken</p>
+</div>
+
+</body>
+</html>
